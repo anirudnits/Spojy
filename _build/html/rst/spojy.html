@@ -1,0 +1,258 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>spojy package &#8212; Spojy 1.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Spojy 1.0.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="spojy-package">
+<h1>spojy package<a class="headerlink" href="#spojy-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="spojy.test.html">spojy.test package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="spojy.test.html#module-spojy.test">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="spojy-complete-profile-info-module">
+<h2>spojy.complete_profile_info module<a class="headerlink" href="#spojy-complete-profile-info-module" title="Permalink to this headline">¶</a></h2>
+<p>
+</p>‘
+This module takes as input: </br>
+i> the username of the profile that you want to gather data about. </br>
+ii> network proxy (optional) </br>
+iii> the maximum number of asynchronous that can be sent at a time,this defaults to 77 </br>
+
+and returns the following: </br>
+i> world rank of the user. </br>
+ii> total points of the user. </br>
+iii> a dictionary with languages used as the key and the number of problems solved with that language as the value.
+iv> a dictionary with problem tag as the key and the number of problems with that problem tag as value. </br>
+</div>
+<div class="section" id="module-spojy.problem_info">
+<span id="spojy-problem-info-module"></span><h2>spojy.problem_info module<a class="headerlink" href="#module-spojy.problem_info" title="Permalink to this headline">¶</a></h2>
+<p>‘
+This module takes as input: </br>
+i&gt; a list of problem urls </br>
+ii&gt; network proxy (optional) </br>
+ii&gt; network proxy (optional) </br>
+and returns a dictionary with the various problem tag as the key and the number of times each key occured as the
+value. This module implements asynchronous requests communication to further
+enhance performance.</p>
+<dl class="function">
+<dt id="spojy.problem_info.fetch">
+<code class="descclassname">spojy.problem_info.</code><code class="descname">fetch</code><span class="sig-paren">(</span><em>url</em>, <em>session</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spojy/problem_info.html#fetch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spojy.problem_info.fetch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="spojy.problem_info.filter_func">
+<code class="descclassname">spojy.problem_info.</code><code class="descname">filter_func</code><span class="sig-paren">(</span><em>s</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spojy/problem_info.html#filter_func"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spojy.problem_info.filter_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>A filter function to remove some unnecessary tags.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="spojy.problem_info.get_tags">
+<code class="descclassname">spojy.problem_info.</code><code class="descname">get_tags</code><span class="sig-paren">(</span><em>problem_list</em>, <em>proxy=''</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spojy/problem_info.html#get_tags"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spojy.problem_info.get_tags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="spojy.problem_info.response_handling">
+<code class="descclassname">spojy.problem_info.</code><code class="descname">response_handling</code><span class="sig-paren">(</span><em>responses</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spojy/problem_info.html#response_handling"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spojy.problem_info.response_handling" title="Permalink to this definition">¶</a></dt>
+<dd><p>extracts the problem tags from the individual problems in conjunction with the function run</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="spojy.problem_info.run">
+<code class="descclassname">spojy.problem_info.</code><code class="descname">run</code><span class="sig-paren">(</span><em>urls</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spojy/problem_info.html#run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spojy.problem_info.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>used for the asynchronous request routine with asyncio</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-spojy.profile_info">
+<span id="spojy-profile-info-module"></span><h2>spojy.profile_info module<a class="headerlink" href="#module-spojy.profile_info" title="Permalink to this headline">¶</a></h2>
+<p>This module takes as input: </br>
+i&gt;username of the user, whom you want to gather information about.</br>
+and returns: </br>
+i&gt; the list of problem codes of the solved problems by the user. </br>
+ii&gt; the list of problem codes of the unsolved problems by the user. </br>
+iii&gt; world_rank of the user </br>
+i&gt; total points of the user</p>
+<dl class="function">
+<dt id="spojy.profile_info.filter_func">
+<code class="descclassname">spojy.profile_info.</code><code class="descname">filter_func</code><span class="sig-paren">(</span><em>s</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spojy/profile_info.html#filter_func"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spojy.profile_info.filter_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>A filter function to remove empty or unnecessary problem names.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="spojy.profile_info.get_profile">
+<code class="descclassname">spojy.profile_info.</code><code class="descname">get_profile</code><span class="sig-paren">(</span><em>profile_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spojy/profile_info.html#get_profile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spojy.profile_info.get_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>The main function which takes the username as input and 
+returns the rank, the total points and the list of solved and unsolved problems.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-spojy.single_problem_info">
+<span id="spojy-single-problem-info-module"></span><h2>spojy.single_problem_info module<a class="headerlink" href="#module-spojy.single_problem_info" title="Permalink to this headline">¶</a></h2>
+<p>This module returns an array of tags pertaining to a single problem.</p>
+<dl class="function">
+<dt id="spojy.single_problem_info.filter_func">
+<code class="descclassname">spojy.single_problem_info.</code><code class="descname">filter_func</code><span class="sig-paren">(</span><em>s</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spojy/single_problem_info.html#filter_func"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spojy.single_problem_info.filter_func" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="spojy.single_problem_info.get_single_problem_tags">
+<code class="descclassname">spojy.single_problem_info.</code><code class="descname">get_single_problem_tags</code><span class="sig-paren">(</span><em>problem</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spojy/single_problem_info.html#get_single_problem_tags"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spojy.single_problem_info.get_single_problem_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main function which takes the problem name as input and returns an array of tags pertaining to that problem.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="spojy.single_problem_info.get_tags">
+<code class="descclassname">spojy.single_problem_info.</code><code class="descname">get_tags</code><span class="sig-paren">(</span><em>problem_url</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spojy/single_problem_info.html#get_tags"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spojy.single_problem_info.get_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>utility function to fetch all the problem tags from the response page</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-spojy.solution_info">
+<span id="spojy-solution-info-module"></span><h2>spojy.solution_info module<a class="headerlink" href="#module-spojy.solution_info" title="Permalink to this headline">¶</a></h2>
+<p>‘
+This module takes as input: </br>
+i&gt; a list of problem urls </br>
+ii&gt; username of the user that submitted the solutions to the problems in the above list </br>
+iii&gt; network proxy (optional) </br>
+and returns a dictionary with the various programming languages as the key and the number of times they were used as the
+value. This module implements asynchronous requests communication to further 
+enhance performance.</p>
+<dl class="function">
+<dt id="spojy.solution_info.fetch">
+<code class="descclassname">spojy.solution_info.</code><code class="descname">fetch</code><span class="sig-paren">(</span><em>url</em>, <em>session</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spojy/solution_info.html#fetch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spojy.solution_info.fetch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="spojy.solution_info.filter_func">
+	
+<code class="descclassname">spojy.solution_info.</code><code class="descname">filter_func</code><span class="sig-paren">(</span><em>s</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spojy/solution_info.html#filter_func"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spojy.solution_info.filter_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>A filter function to remove some broken/wrong language names used.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="spojy.solution_info.get_langs">
+<code class="descclassname">spojy.solution_info.</code><code class="descname">get_langs</code><span class="sig-paren">(</span><em>problem_list</em>, <em>user</em>, <em>proxy=''</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spojy/solution_info.html#get_langs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spojy.solution_info.get_langs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main function which takes the input as problem list and an optional proxy
+It also initialises proxy_used if the user provides any proxy</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="spojy.solution_info.response_handling">
+<code class="descclassname">spojy.solution_info.</code><code class="descname">response_handling</code><span class="sig-paren">(</span><em>responses</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spojy/solution_info.html#response_handling"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spojy.solution_info.response_handling" title="Permalink to this definition">¶</a></dt>
+<dd><p>used for the asynchronous request handling in part with asyncio</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="spojy.solution_info.run">
+<code class="descclassname">spojy.solution_info.</code><code class="descname">run</code><span class="sig-paren">(</span><em>urls</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spojy/solution_info.html#run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#spojy.solution_info.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-spojy">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-spojy" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">spojy package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#spojy-complete-profile-info-module">spojy.complete_profile_info module</a></li>
+<li><a class="reference internal" href="#module-spojy.problem_info">spojy.problem_info module</a></li>
+<li><a class="reference internal" href="#module-spojy.profile_info">spojy.profile_info module</a></li>
+<li><a class="reference internal" href="#module-spojy.single_problem_info">spojy.single_problem_info module</a></li>
+<li><a class="reference internal" href="#module-spojy.solution_info">spojy.solution_info module</a></li>
+<li><a class="reference internal" href="#module-spojy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/rst/spojy.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Spojy 1.0.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Aniruddha Bhattacharjee.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.
+    </div>
+  </body>
+</html>
